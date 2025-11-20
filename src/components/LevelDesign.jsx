@@ -70,7 +70,7 @@ export function TicTacToe({levelStep, setLevelStep,count, setCount, attemptAmoun
                 setResult("lose");
                 return;
             }
-            console.log(newArray)
+            // console.log(newArray)
             return newArray
         }
         const emptyBoard = findAllEmptyCell(board)
