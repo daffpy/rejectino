@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation"
-import { redirect } from "next/navigation"
 import { Bitcount_Grid_Single } from "next/font/google";
 import { FaceSadIcon } from "./Emoticon";
 import Image from "next/image";
@@ -35,8 +34,11 @@ export default function ResultPageLayout(){
         const result = s_params.get("result")
 
 
+        const router = useRouter();
+
         if (!user || !result) {
-            redirect("/")
+            router.push("/");
+            return null;
         }
 
         if (result === "accepted") {
