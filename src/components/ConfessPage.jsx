@@ -1,9 +1,9 @@
 "use client"
 
-import { useSearchParams } from "next/navigation"
+import { useSearchParams, useRouter } from "next/navigation"
 import { redirect } from "next/navigation"
 import ChoiceButtons from "./ChoiceButton"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Bitcount_Grid_Single } from "next/font/google";
 
 const bitcount = Bitcount_Grid_Single({
@@ -15,9 +15,11 @@ export default function ConfessPageLayout(){
     const s_params = useSearchParams()
     const user = s_params.get("crush")
 
-    if(user === null || user === ""){
-        redirect("/")
-    }
+    useEffect(() => {
+        if (!user) {
+        router.push("/");
+        }
+    }, [user, router]);
     const [count, setCount] = useState(0)
 
     return (
