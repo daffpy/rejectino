@@ -12,6 +12,7 @@ const bitcount = Bitcount_Grid_Single({
 });
 
 export default function ConfessPageLayout(){
+    const router = useRouter()
     const s_params = useSearchParams()
     const user = s_params.get("crush")
 
