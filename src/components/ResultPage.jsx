@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation"
 import { Bitcount_Grid_Single } from "next/font/google";
 import { FaceSadIcon } from "./Emoticon";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 
