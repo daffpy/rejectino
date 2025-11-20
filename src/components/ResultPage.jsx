@@ -21,6 +21,7 @@ export default function ResultPageLayout(){
     const result = s_params.get("result")
     const [highestLevel, setHighest] = useState(0);
     const [attemptAmount, setAttempt] = useState(0);
+    const router = useRouter();
 
     useEffect(() => {
         const saved = Number(sessionStorage.getItem("furthestLevel") || 0);
@@ -33,9 +34,6 @@ export default function ResultPageLayout(){
         const crush = s_params.get("crush")
         const user = s_params.get("user")
         const result = s_params.get("result")
-
-
-        const router = useRouter();
 
         if (!user || !result) {
             router.push("/");
