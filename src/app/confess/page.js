@@ -2,6 +2,7 @@
 
 export const dynamic = "force-dynamic";
 
+import { Suspense } from "react";
 import Image from "next/image";
 import ConfessPageLayout from "@/components/ConfessPage";
 import {useBg } from "@/context/BackgroundContext";
@@ -14,7 +15,9 @@ export default function Home() {
 
     </div>
     <div className="justify-center flex">
-      <ConfessPageLayout/>
+      <Suspense>
+        <ConfessPageLayout/>
+      </Suspense>
     </div>
     
     
