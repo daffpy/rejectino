@@ -217,8 +217,8 @@ export function TicTacToe({levelStep, setLevelStep,count, setCount, attemptAmoun
 
                 )}
             </div>
-            {isWin}
-            {count}
+            {/* {isWin}
+            {count} */}
         </div>
     )
 }
